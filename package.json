@@ -1,0 +1,15 @@
+{
+  "name": "pragati",
+  "private": true,
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "npm --workspace client run dev",
+    "dev:server": "npm --workspace server run dev",
+    "build": "npm --workspace client run build",
+    "lint": "npm --workspace client run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

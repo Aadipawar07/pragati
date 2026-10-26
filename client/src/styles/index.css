@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F7F5F0;
+  --color-paper: #FBFAF7;
+  --color-white: #FFFFFF;
+  --color-ink: #171717;
+  --color-ink-soft: #303030;
+  --color-muted: #737373;
+  --color-line: #E5E1D8;
+  --color-line-soft: #EEEAE2;
+  --color-beige: #D8D0C1;
+  --color-taupe: #B8AEA0;
+  --font-sans: "Inter", system-ui, "Noto Sans Devanagari", sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-ivory);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: var(--color-ivory); color: var(--color-ink); -webkit-font-smoothing: antialiased; }
+button, a { font: inherit; }
+:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(var(--float-rotate, 0deg)); }
+  50% { transform: translateY(-2px) rotate(var(--float-rotate, 0deg)); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
